@@ -35,12 +35,12 @@ public class AmazonSearch {
 		
 //		String Iphone12="//*[@class='a-size-medium a-color-base a-text-normal']";
 //		String value ="//*[@class='a-offscreen']";
-
-//		String text=driver.findElement(By.xpath(Iphone12)).getAttribute("title");
-		//System.out.println(text);
-
-//		String price=driver.findElement(By.xpath(value)).getText();
-		//System.out.println(price);
+//
+//		String text=driver.findElement(By.xpath(Iphone12)).getAttribute("title"));
+//		//System.out.println(text);
+//
+//		String price=driver.findElement(By.xpath(value)).getText());
+//		
 		
 			List<WebElement> P1 = driver.findElements(By.xpath("//*[@class='a-size-medium a-color-base a-text-normal']"));
 			List<WebElement> Pp1 = driver.findElements(By.xpath("//*[@class='a-price-whole']"));
@@ -49,11 +49,11 @@ public class AmazonSearch {
 			
 			for(int i=0 ;i<P1.size();i++)
 			{
-				System.out.println("Product Name" +P1.get(i).getText()+ "price is "+Pp1.get(i).getText());
+				System.out.println("Product Name = " +P1.get(i).getText()+ "price is "+Pp1.get(i).getText());
 			}
 
 			
-			for(WebElement elm : P1) {
+			/*for(WebElement elm : P1) {
 				
 				System.out.println(elm.getText());
 				
@@ -61,14 +61,27 @@ public class AmazonSearch {
 			for(WebElement price1 : Pp1) {
 		
 				System.out.println(price1.getText());
-			}
+			}*/
 			
-	
+	/*
+	     HashMap<String,String> values= new HashMap<String,String>();
+        
+        
+        System.out.println(text.size());
+        for (int i=0;i<=price.size()-1;i++) {
+            if (text.get(i).getText().contains("Apple iPhone 12")) {
+            
+            values.put(text.get(i).getText(), price.get(i).getText());
+        }
+        }
+        
+        for(Map.Entry<String, String> entry1 :values.entrySet()) {
+	 */
 	
 			
 			
 		
-			
+		driver.close();	
 
 }
 
